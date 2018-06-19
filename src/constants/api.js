@@ -1,1 +1,1 @@
-export const API_ENDPOINT = process.env.API_ENDPOINT;
+export const API_ENDPOINT = process.env.NODE_ENV === 'production'?process.env.REACT_APP_PROD_API_ENDPOINT:process.env.REACT_APP_DEV_API_ENDPOINT;
