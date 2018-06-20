@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import { withStyles } from '@material-ui/core/styles';
 
-
 const styles = {
   formControl: {
     display: 'flex',
@@ -18,22 +17,22 @@ const styles = {
   },
   buttonField: {
     flex: '0 0 auto',
-    margin: 10
-  }
+    margin: 10,
+  },
 };
 
 class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: ''
+      search: '',
     };
     this.handleSearch = this.handleSearch.bind(this);
   }
-  handleChange(event){
+  handleChange(event) {
     this.setState({ search: event.target.value });
   }
-  handleSearch(event){
+  handleSearch(event) {
     event.preventDefault();
     this.props.handleSearch(this.state.search);
   }
@@ -53,8 +52,9 @@ class SearchBar extends Component {
             <Button
               onClick={this.handleSearch}
               className={classes.buttonField}
-              variant="contained" 
-              color="primary">
+              variant="contained"
+              color="primary"
+            >
               Search
             </Button>
           </FormControl>

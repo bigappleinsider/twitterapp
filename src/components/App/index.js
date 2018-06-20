@@ -12,12 +12,12 @@ const styles = {
 };
 
 const App = ({ classes }) => (
-    <main>
-      <Header />
-      <div className={classes.container}>
-        <Route exact path="/" component={Home} />
-      </div>
-    </main>
+  <main>
+    <Header />
+    <div className={classes.container}>
+      <Route exact path="/" component={Home} />
+    </div>
+  </main>
 );
 
 export default withStyles(styles)(App);
