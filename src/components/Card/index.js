@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import format from 'date-fns/format';
@@ -58,5 +60,10 @@ class TCard extends Component {
     );
   }
 }
+
+TCard.propTypes = {
+  classes: PropTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(TCard);

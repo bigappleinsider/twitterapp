@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
@@ -62,4 +63,10 @@ class SearchBar extends Component {
     );
   }
 }
+
+SearchBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+  handleSearch: PropTypes.func.isRequired,
+};
+
 export default withStyles(styles)(SearchBar);
